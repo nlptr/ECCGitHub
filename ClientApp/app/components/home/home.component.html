@@ -1,0 +1,142 @@
+<div class="panel panel-primary">
+    <div class="panel-heading panel-header-text">
+        <div class="row">
+            <div class="col-sm-4">
+               ECC
+            </div>
+         </div>
+     </div>
+    <div class="panel-body">
+        <form #resistorfrm="ngForm" autocomplete="off">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="digit1dropdown" class="label-style">1st Digit</label>
+                                <select #digit1="ngModel" class="form-control input-sm dd-resistor"
+                                        id="digit1dropdown"
+                                        name="digit1dropdown"
+                                        [(ngModel)]="ddDigit1"
+                                        (change)="onddDigit1Changed()"
+                                        [ngClass]="getDDColor(ddDigit1)">
+                                    <option *ngFor="let data of digit1Data;" 
+                                            [ngValue]="data" 
+                                            [ngClass]="getOptionColor(data.text)"
+                                            >{{data.value}} {{data.text}}</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="digit2dropdown" class="label-style">2nd Digit</label>
+                                <select #digit2="ngModel" class="form-control input-sm dd-resistor"
+                                        id="digit2dropdown"
+                                        name="digit2dropdown"
+                                        [(ngModel)]="ddDigit2"
+                                        (change)="onddDigit2Changed()"
+                                        [ngClass]="getDDColor(ddDigit2)">
+                                    <option *ngFor="let data of digit2Data;"
+                                            [ngValue]="data"
+                                            [ngClass]="getOptionColor(data.text)">
+                                        {{data.value}} {{data.text}}
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="multiplierdropdown" class="label-style">Multiplier</label>
+                                <select #multiplier="ngModel" class="form-control input-sm dd-resistor"
+                                        id="multiplierdropdown"
+                                        name="multiplierdropdown"
+                                        [(ngModel)]="ddmultiplier"
+                                        (change)="onddMultiplierChanged()"
+                                        [ngClass]="getDDColor(ddmultiplier)">
+                                    <option *ngFor="let data of multiplierData;"
+                                            [ngValue]="data"
+                                            [ngClass]="getOptionColor(data.text)">
+                                        {{data.type}}{{data.valueDisplay}} {{data.text}}
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="tolerancedropdown" class="label-style">Tolerance</label>
+                                <select #tolerance="ngModel" class="form-control input-sm dd-resistor"
+                                        id="tolerancedropdown"
+                                        name="tolerancedropdown"
+                                        [(ngModel)]="ddtolerance"
+                                        (change)="onddToleranceChanged()"
+                                        [ngClass]="getDDColor(ddtolerance)">
+                                    <option *ngFor="let data of toleranceData;"
+                                            [ngValue]="data"
+                                            [ngClass]="getOptionColor(data.text)">
+                                        {{data.type}}{{data.valueDisplay}} {{data.text}}
+                                    </option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="resistance" class="label-style">Resistance</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm input-form-text"
+                                   id="resistance"
+                                   name="resistance"
+                                   [ngModel] ="computedvalue.resistance"/>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="tolerance" class="label-style">Tolerance</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm input-form-text"
+                                   id="tolerance"
+                                   name="tolerance"
+                                   [ngModel] ="computedvalue.toleranceDisplay"/>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="minimum" class="label-style">Minimum</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm input-form-text"
+                                   id="minimum"
+                                   name="minimum"
+                                   [ngModel]="computedvalue.minimum"/>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="maximum" class="label-style">Maximum</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control input-sm input-form-text"
+                                   id="maximum"
+                                   name="maximum"
+                                   [ngModel]="computedvalue.maximum"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

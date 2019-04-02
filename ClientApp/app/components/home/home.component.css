@@ -1,0 +1,52 @@
+﻿.black {
+    background-color: black;
+    color: white;
+}
+.brown {
+    background-color: saddlebrown;
+    color: white;
+}
+.red {
+    background-color: red;
+    color: white;
+}
+.orange {
+    background-color: orange;
+    color: white;
+}
+.yellow {
+    background-color: yellow;
+    color: white;
+}
+.green {
+    background-color: green;
+    color: white;
+}
+.blue {
+    background-color: blue;
+    color: white;
+}
+.violet {
+    background-color: violet;
+    color: white;
+}
+.gray {
+    background-color: dimgray;
+    color: white;
+}
+.white {
+    background-color: white;
+    color:black;
+}
+.gold {
+    background-color: darkgoldenrod;
+    color: black;
+}
+.silver {
+    background-color: silver;
+    color: black;
+}
+.dd-resistor{
+    font-weight:bold;
+}
+
