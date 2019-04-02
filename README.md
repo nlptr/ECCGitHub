@@ -12,4 +12,4 @@ Follow the below instructions :
 6. For the path variable to be reflected correctly, close the command prompt and reopen again. 
 7. After Step 6 is done, run this command in your web directory Webpack --config webpack.config.vendor.js . This will compile all the vendor libraries. 
 8. After step 7 is done, just run this command in your web directory … webpack. This will compile your angular app. 
-UI screen is also attached for your reference.
+UI screenng(ECCUI.p) is also attached for your reference.
